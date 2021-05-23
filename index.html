@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script>
+      var PayWithMyBankOptions = {
+        closeButton: false,
+        dragAndDrop: true,
+        widgetContainerId: 'widget',
+     };
+
+       
+   </script>
+   <script src="https://sandbox.paywithmybank.com/start/scripts/paywithmybank.js?accessId=XzHpRUr7RF75hg9nC5x2"></script>
+  </head>
+
+  <body style="margin: 0;">
+   <div id="widget"></div>
+  </body>
+
+  <script>
+      var establishData = {
+      accessId: 'XzHpRUr7RF75hg9nC5x2',
+      merchantId: '1012523953',
+      merchantReference: 'Test1',
+      description: 'Test Environment',
+      currency: 'USD',
+      amount: '25.00',
+      merchantReference: 'SandBox Store',
+      paymentType: 'Deferred',
+      returnUrl: 'https://merchant.com/paywithmybank/return',
+      cancelUrl: 'https://merchant.com/paywithmybank/cancel'        
+    };
+    PayWithMyBank.selectBankWidget(establishData, PayWithMyBankOptions);
+  </script>
+  
+</html>rest
