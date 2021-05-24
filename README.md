@@ -4,4 +4,4 @@
 
 ### HTML
 
-### Javascrip
+### Javascript
