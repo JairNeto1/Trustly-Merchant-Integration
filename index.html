@@ -3,36 +3,49 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/assets/styles/main.css" />
 
-    <script>
-      var PayWithMyBankOptions = {
-        closeButton: false,
-        dragAndDrop: true,
-        widgetContainerId: 'widget',
-     };
-   </script>
+  <script src="/src/index.js" defer></script>
 
-  <script src="https://sandbox.paywithmybank.com/start/scripts/paywithmybank.js? accessId=MER_ID"></script>
+  <script src="https://sandbox.paywithmybank.com/start/scripts/paywithmybank.js?accessId=XHC67YWPe29WVg92EyZP"></script>
   </head>
 
-  <body style="margin: 0;">
-   <div id="widget"></div>
+  <body>
+      <header>
+        
+      </header>
+      <div class="iphone">
+        <img width="30%" src="/assets/img/iphone.png"/>
+      </div>
+
+      <div id="widget"></div>
+
+
+
+
+      <footer>
+        <div class="footer">
+          <div id="page-footer" class="grid grid-pad">
+            <div class="col-6-12 mobile-col-6-12 copy">
+              <div class="content">
+                <a href="contact">Contact Us</a> | <a href="https://www.trustly.net" target="_blank">Visit our Website</a>
+              </div>
+            </div>
+            <div class="col-6-12 mobile-col-6-12 rightfooter">
+              <div class="content">
+                <span title="1.120.0-2021-06-07T19:29:59Z">®</span> 2021 <img src="images/trial-logofooter.svg" class="logo">. All rights reserved.
+              </div>
+            </div>
+          </div>
+      </div>
+      </footer>    
+
   </body>
 
-  <script>
-      var establishData = {
-      accessId: 'MER_ID',
-      merchantId: '1012523953',
-      merchantReference: 'Test1',
-      description: 'Test Environment',
-      currency: 'USD',
-      amount: '25.00',
-      merchantReference: 'SandBox Store',
-      paymentType: 'Deferred',
-      returnUrl: 'https://merchant.com/paywithmybank/return',
-      cancelUrl: 'https://merchant.com/paywithmybank/cancel'        
-    };
-    PayWithMyBank.selectBankWidget(establishData, PayWithMyBankOptions);
-  </script>
+ 
+
+
+  
+ 
 
 </html>
