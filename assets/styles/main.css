@@ -7,13 +7,118 @@
 }
 
 html {
-  --background: #ebf9fd;
-
+  --background: #ffffff;
   font-size: 62, 5%;
 }
 
 body {
-  /*display: flex;*/
+  display: grid;
   height: 100vh;
   background: var(--background);
+}
+
+:focus {
+  outline-style: none;
+  outline-color: transparent;
+  background-color: #ebf9fd;
+}
+
+header {
+  background-color: #16b8eb;
+  height: 90px;
+}
+
+.iphone {
+  margin-left: 300px;
+  margin-top: -130px;
+}
+
+#amount-buttons {
+  margin-top: 6px;
+  display: table;
+  margin-left: 800px;
+  margin-top: -360px;
+}
+
+#amount-buttons > a {
+  font-size: 16px;
+  font-weight: 500;
+  display: block;
+  float: left;
+  width: 100px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  padding: 8px 5px;
+  text-align: center;
+  text-decoration: none;
+  color: #18d0fd;
+  border: 1px solid #18d0fd;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+#amount-buttons > a:hover {
+  color: #16b8eb;
+  border: 3px solid #16b8eb;
+  padding: 6px 5px;
+}
+
+#amount-buttons > a:active {
+  color: #16b8eb;
+  border: 3px solid #16b8eb;
+}
+
+#amount-buttons > a.amount-button-selected {
+  color: #fff;
+  background-color: #16b8eb;
+  border: 1px solid #16b8eb;
+  padding: 8px 5px;
+}
+
+#widget {
+  margin-left: 800px;
+  margin-top: -300px;
+}
+
+.footer {
+  width: 100%;
+  font-size: 16px;
+  position: absolute;
+  bottom: 30px;
+}
+
+.footer a {
+  font-weight: normal;
+}
+
+.footer .rightfooter {
+  padding-right: 40px;
+}
+
+.rightfooter {
+  text-align: right;
+  color: #535353;
+}
+
+.footer .rightfooter {
+  padding-right: 40px;
+}
+
+.rightfooter {
+  text-align: right;
+  color: #535353;
+}
+
+.rightfooter .logo {
+  width: 120px;
+  min-width: 100px;
+  position: relative;
+  top: 4px;
+  margin: -10px;
+}
+
+.copy {
+  text-align: left;
+  color: #357139;
+  padding-left: 15px;
 }
