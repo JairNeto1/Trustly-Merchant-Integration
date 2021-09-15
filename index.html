@@ -6,53 +6,62 @@
   <link rel="stylesheet" href="/assets/styles/main.css" />
 
   <script src="/src/index.js" defer></script>
-
+  <script src="/src/amount-button.js" defer></script>
   <script src="https://sandbox.paywithmybank.com/start/scripts/paywithmybank.js?accessId=XHC67YWPe29WVg92EyZP"></script>
+
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/trustly-logo.ico" />
+  <title>Trustly test</title>
   </head>
+    <body>
+          <header>
+            <img src="./assets/img/white-logo.svg" class="logo1"/>
+          </header>
+            <div class="iphone">
+              <img width="30%" src="/assets/img/iphone.png"/>
+            </div>
+        <form id="pwmbForm" action="/trial-site/pay" method="GET">
+          
+          <input id="amount" name="amount" type="hidden" value="0.50">
+          <div class="col-8-10 push-1-3 mobile--content">
+            <div class="content amount">
+              <label for="amount"></label>
+            <div id="amount-buttons">
+              <a href="#" class="amount-button amount-button-selected" data-amount="0.50">$0.50</a>
+              <a href="#" class="amount-button" data-amount="5.00">$5.00</a>
+              <a href="#" class="amount-button" data-amount="50.00">$50.00</a>
+              <a href="#" data-custom-amount="set-custom-amount">Custom</a>
+            </div>
 
-  <body>
-      <header>
-        
-      </header>
-        <div class="iphone">
-          <img width="30%" src="/assets/img/iphone.png"/>
-        </div>
+            <div class="custom-amount-wrapper edit-on">
+              <p class="title-custom-amount">Enter the amount you want to donate (maximum: $ 160.00):</p>
+              <div class="custom-amount-input-wrapper">
+                <input type="text" class="input-custom-amount" size="8" data-currency-mask="usd" maxlength="8">
+                <button id="confirm-custom-amount" class="button-custom-amount confirm">Confirm</button>
+                <button id="edit-custom-amount" class="button-custom-amount edit">Edit</button>
+              </div>
+              <p id="custom-amount-error-msg" class="custom-amount-error-msg" style="display: none;">Please enter the amount before selecting your bank.</p>
+            </div>
 
-        <div id="amount-buttons">
-          <a href="#" class="amount-button amount-button-selected" data-amount="0.50">$0.50</a>
-          <a href="#" class="amount-button" data-amount="5.00">$5.00</a>
-          <a href="#" class="amount-button" data-amount="50.00">$50.00</a>
-          <a href="#" data-custom-amount="set-custom-amount">Custom</a>
-        </div>
-
-      <div id="widget"></div>
-
-
-
-
-      <footer>
-        <div class="footer">
-          <div id="page-footer" class="grid grid-pad">
-            <div class="col-6-12 mobile-col-6-12 copy">
-              <div class="content">
-                <a href="contact">Contact Us</a> | <a href="https://www.trustly.net" target="_blank">Visit our Website</a>
+          <div id="widget"></div>
+        </form>    
+          <footer>
+            <div class="footer">
+              <div id="page-footer" class="grid grid-pad"></div>
+                <div class="leftfooter">
+                  <div class="content">
+                    <a href="contact">Contact Us</a> | <a href="https://www.trustly.net" target="_blank">Visit our Website</a>
+                  </div>
+                </div>
+                <div class="rightfooter">
+                  <div class="content">
+                    <span title="1.120.0-2021-06-07T19:29:59Z">®</span> 2021 <img src="./assets/img/trial-logofooter.svg" class="logo">. All rights reserved.
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-6-12 mobile-col-6-12 rightfooter">
-              <div class="content">
-                <span title="1.120.0-2021-06-07T19:29:59Z">®</span> 2021 <img src="./assets/img/trial-logofooter.svg" class="logo">. All rights reserved.
-              </div>
-            </div>
-          </div>
-      </div>
-      </footer>    
+          </footer>    
 
-  </body>
-
- 
-
-
-  
- 
+    </body>
 
 </html>
+

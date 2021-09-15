@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   border: none;
@@ -21,23 +21,45 @@ body {
   outline-style: none;
   outline-color: transparent;
   background-color: #ebf9fd;
+}*/
+
+@charset 'utf-8';
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+}
+
+:focus {
+  outline-style: none;
+  outline-color: transparent;
+  background-color: #ebf9fd;
 }
 
 header {
-  background-color: #16b8eb;
-  height: 90px;
+  background-color: #0ae06b;
+  height: 100px;
+  width: 100%;
+}
+
+.logo1 {
+  width: 15%;
+  justify-content: center;
+  align-items: center;
 }
 
 .iphone {
-  margin-left: 300px;
-  margin-top: -130px;
+  margin-left: 200px;
+  margin-top: -70px;
 }
 
 #amount-buttons {
+  width: 100%;
   margin-top: 6px;
   display: table;
-  margin-left: 800px;
-  margin-top: -360px;
+  margin-left: 700px;
+  margin-top: -350px;
 }
 
 #amount-buttons > a {
@@ -76,8 +98,8 @@ header {
 }
 
 #widget {
-  margin-left: 800px;
-  margin-top: -300px;
+  margin-left: 700px;
+  margin-top: 50px;
 }
 
 .footer {
@@ -87,8 +109,18 @@ header {
   bottom: 30px;
 }
 
+.leftfooter {
+  text-align: left;
+  padding-left: 15px;
+  margin-bottom: -25px;
+  margin-left: 20px;
+}
+
 .footer a {
   font-weight: normal;
+  font-family: 'Lato', sans-serif;
+  text-decoration: none;
+  color: #535353;
 }
 
 .footer .rightfooter {
@@ -98,6 +130,7 @@ header {
 .rightfooter {
   text-align: right;
   color: #535353;
+  margin-bottom: -20px;
 }
 
 .footer .rightfooter {
@@ -117,8 +150,84 @@ header {
   margin: -10px;
 }
 
-.copy {
-  text-align: left;
-  color: #357139;
-  padding-left: 15px;
+/*Custom Amount*/
+
+.custom-amount-wrapper {
+  display: none;
+  clear: both;
+  margin-top: 25px;
+}
+
+.custom-amount-wrapper.active {
+  display: block;
+}
+
+.title-custom-amount {
+  font-size: 20px;
+  color: #888;
+}
+
+.input-custom-amount {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid transparent;
+  font-size: 20px;
+  font-weight: bold;
+  color: #17afec;
+}
+
+.edit-on .input-custom-amount {
+  color: #000;
+  border-color: #333;
+}
+
+.custom-amount-input-wrapper::before {
+  content: '$';
+  display: inline-block;
+  font-size: 18px;
+  color: #17afec;
+  width: 15px;
+  height: 15px;
+  position: relative;
+}
+
+.edit-on .custom-amount-input-wrapper::before {
+  color: #000;
+}
+
+.custom-amount-error-msg {
+  font-size: 16px;
+  color: red;
+  display: none;
+}
+
+.button-custom-amount {
+  margin-left: 8px;
+  margin-bottom: 8px;
+  width: 100px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #16b8eb;
+  border: 1px solid #16b8eb;
+  border-radius: 6px;
+  padding: 8px 5px;
+  cursor: pointer;
+}
+
+.button-custom-amount.edit {
+  background-color: transparent;
+  color: #16b8eb;
+}
+
+.button-custom-amount.confirm {
+  display: none;
+}
+
+.edit-on .button-custom-amount.confirm {
+  display: inline-block;
+}
+
+.edit-on .button-custom-amount.edit {
+  display: none;
 }
