@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="/assets/styles/main.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/assets/styles/main.css" />
 
-  <script src="/src/index.js" defer></script>
-  <script src="/src/amount-button.js" defer></script>
-  <script src="https://sandbox.paywithmybank.com/start/scripts/paywithmybank.js?accessId=XHC67YWPe29WVg92EyZP"></script>
+    <script src="/src/index.js" defer></script>
+    <script src="src/amount-buttoncopy.js" defer></script>
+    <script src="https://sandbox.paywithmybank.com/start/scripts/paywithmybank.js?   accessId=XHC67YWPe29WVg92EyZP"></script>
 
-  <link rel="shortcut icon" type="image/x-icon" href="assets/img/trustly-logo.ico" />
-  <title>Trustly test</title>
+      <link rel="shortcut icon" type="image/x-icon" href="assets/img/trustly-logo.ico" />
+      <title>Integration</title>
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
   </head>
+
+
     <body>
           <header>
             <img src="./assets/img/white-logo.svg" class="logo1"/>
@@ -26,16 +32,22 @@
             <div class="content amount">
               <label for="amount"></label>
             <div id="amount-buttons">
-              <a href="#" class="amount-button amount-button-selected" data-amount="0.50">$0.50</a>
-              <a href="#" class="amount-button" data-amount="5.00">$5.00</a>
-              <a href="#" class="amount-button" data-amount="50.00">$50.00</a>
-              <a href="#" data-custom-amount="set-custom-amount">Custom</a>
+              <a href="#" onclick="cent()" id="cent" class="amount-button amount-button-selected" data-amount="0.50">$0.50</a>
+
+              <a href="#" onclick="five()" id="five" class="amount-button" data-amount="5.00">$5.00</a>
+
+              <a href="#" onclick="fifty()" id="fifty" class="amount-button" data-amount="50.00">$50.00</a>
+
+              <a href="#" id="custom" 
+              onclick="custom()"
+              data-custom-amount="set-custom-amount">Custom</a>
             </div>
 
-            <div class="custom-amount-wrapper edit-on">
-              <p class="title-custom-amount">Enter the amount you want to donate (maximum: $ 160.00):</p>
+            <div  class="custom-amount-wrapper editon">
+              <p class="title-custom-amount">Enter the amount you want to 
+                deposit (maximum: $ 160.00):</p>
               <div class="custom-amount-input-wrapper">
-                <input type="text" class="input-custom-amount" size="8" data-currency-mask="usd" maxlength="8">
+                <input type="number" class="input-custom-amount" size="8" data-currency-mask="usd" maxlength="8">
                 <button id="confirm-custom-amount" class="button-custom-amount confirm">Confirm</button>
                 <button id="edit-custom-amount" class="button-custom-amount edit">Edit</button>
               </div>
@@ -59,9 +71,10 @@
                 </div>
               </div>
             </div>
-          </footer>    
+          </footer>   
 
     </body>
 
 </html>
+
 

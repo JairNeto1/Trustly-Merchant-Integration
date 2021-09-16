@@ -156,6 +156,7 @@ header {
   display: none;
   clear: both;
   margin-top: 25px;
+  margin-left: 710px;
 }
 
 .custom-amount-wrapper.active {
@@ -169,14 +170,21 @@ header {
 
 .input-custom-amount {
   background: transparent;
+  width: 10%;
   border: none;
   border-bottom: 1px solid transparent;
   font-size: 20px;
   font-weight: bold;
   color: #17afec;
+  -webkit-appearance: none;
 }
 
-.edit-on .input-custom-amount {
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.editon .input-custom-amount {
   color: #000;
   border-color: #333;
 }
@@ -191,7 +199,7 @@ header {
   position: relative;
 }
 
-.edit-on .custom-amount-input-wrapper::before {
+.editon .custom-amount-input-wrapper::before {
   color: #000;
 }
 
@@ -224,10 +232,10 @@ header {
   display: none;
 }
 
-.edit-on .button-custom-amount.confirm {
+.editon .button-custom-amount.confirm {
   display: inline-block;
 }
 
-.edit-on .button-custom-amount.edit {
+.editon .button-custom-amount.edit {
   display: none;
 }
