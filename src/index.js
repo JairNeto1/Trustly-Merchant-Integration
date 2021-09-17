@@ -7,12 +7,10 @@ var PayWithMyBankOptions = {
 var establishData = {
   accessId: 'XHC67YWPe29WVg92EyZP',
   merchantId: '1017088088',
-  merchantReference: 'Test1',
+  merchantReference: 'Money2020',
   description: 'Money2020',
   currency: 'USD',
-  amount: '5.00',
-  displayAmount: '123456.00',
-  merchantReference: 'SandBoxTransaction',
+  amount: '0.50',
   paymentType: 'Deferred',
   returnUrl: 'http://127.0.0.1:5501',
   cancelUrl: 'http://127.0.0.1:5501'
