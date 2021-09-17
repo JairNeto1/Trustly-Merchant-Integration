@@ -12,8 +12,20 @@ var establishData = {
   currency: 'USD',
   amount: '0.50',
   paymentType: 'Deferred',
-  returnUrl: 'http://trustlyintegration.herokuapp.com',
-  cancelUrl: 'http://trustlyintegration.herokuapp.com'
+  returnUrl: '#success',
+  cancelUrl: '#cancel'
 }
+
+PayWithMyBank.addPanelListener(function (command, event) {
+  if (command === 'event' && event.type === 'new_location') {
+    if (event.data.indexOf('#success') === 0) {
+      location = 'https://trustlyintegration.herokuapp.com/'
+      console.log('[success]', event.data)
+    } else {
+      console.log('[cancel]', event.data)
+    }
+    return false
+  }
+})
 
 PayWithMyBank.selectBankWidget(establishData, PayWithMyBankOptions)
