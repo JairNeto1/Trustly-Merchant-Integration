@@ -12,8 +12,8 @@ var establishData = {
   currency: 'USD',
   amount: '0.50',
   paymentType: 'Deferred',
-  returnUrl: 'http://127.0.0.1:5501',
-  cancelUrl: 'http://127.0.0.1:5501'
+  returnUrl: 'http://jairneto1.github.io/Trustly-Merchant-Integration',
+  cancelUrl: 'http://jairneto1.github.io/Trustly-Merchant-Integration'
 }
 
 PayWithMyBank.selectBankWidget(establishData, PayWithMyBankOptions)
