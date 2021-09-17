@@ -12,8 +12,8 @@ var establishData = {
   currency: 'USD',
   amount: '0.50',
   paymentType: 'Deferred',
-  returnUrl: 'http://jairneto1.github.io/Trustly-Merchant-Integration',
-  cancelUrl: 'http://jairneto1.github.io/Trustly-Merchant-Integration'
+  returnUrl: 'http://trustlyintegration.herokuapp.com',
+  cancelUrl: 'http://trustlyintegration.herokuapp.com'
 }
 
 PayWithMyBank.selectBankWidget(establishData, PayWithMyBankOptions)
