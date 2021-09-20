@@ -26,6 +26,10 @@ function cent() {
   document.querySelector('.editon').classList.remove('amount-button-selected')
   document.querySelector('#cent').classList.add('amount-button-selected')
   document.querySelector('.editon').style.display = 'none'
+  //document.querySelector('amount-button-selected').value = startDynamicWidget
+  //document
+  //.querySelector('#amount-button-selected')
+  //.addEventListener('onclick', PayWithMyBank.selectBankWidget)
 }
 
 function five() {

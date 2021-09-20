@@ -19,10 +19,12 @@ var establishData = {
 PayWithMyBank.addPanelListener(function (command, event) {
   if (command === 'event' && event.type === 'new_location') {
     if (event.data.indexOf('#success') === 0) {
-      location = 'https://trustlyintegration.herokuapp.com/'
+      //location = 'https://trustlyintegration.herokuapp.com/'
+      location = 'http://127.0.0.1:5501'
       console.log('[success]', event.data)
     } else {
       console.log('[cancel]', event.data)
+      location = 'http://127.0.0.1:5501'
     }
     return false
   }
