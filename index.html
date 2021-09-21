@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/assets/styles/main.css" />
 
     <script src="/src/index.js" defer></script>
-    <script src="src/amount-buttoncopy.js" defer></script>
+    <script src="src/amount-buttoncop.js" defer></script>
     <script src="https://sandbox.paywithmybank.com/start/scripts/paywithmybank.js?accessId=XHC67YWPe29WVg92EyZP"></script>
 
       <link rel="shortcut icon" type="image/x-icon" href="assets/img/trustly-logo.ico" />
@@ -20,11 +20,15 @@
 
     <body>
           <header>
-            <img src="./assets/img/white-logo.svg" class="logo1"/>
+            <div>
+             <img src="./assets/img/white-logo.svg">
+            </div>
           </header>
+
             <div class="iphone">
               <img width="30%" src="/assets/img/iphone.png"/>
             </div>
+          
         <form id="pwmbForm" action="/trial-site/pay" method="GET">
           
           <input id="amount" name="amount" type="hidden" value="0.50">
