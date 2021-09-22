@@ -1,8 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
-@charset 'utf-8';
 
-html,
 body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 120px;
+
+  background-color: #0ae06b;
+}
+
+.header img {
+  margin-right: 900px;
+  width: 30% !important;
+}
+
+.container {
+  display: grid;
+  max-width: 800px;
+  min-width: 320;
 }
 
 :focus {
@@ -11,39 +32,26 @@ body {
   background-color: #ebf9fd;
 }
 
-header {
-  background-color: #0ae06b;
-  display: center;
-  width: 100%;
-  background-size: 100% 100%;
-  margin-top: -10px;
-  margin-left: -10px;
-  margin-right: -10px;
-  padding: 30px 8px 0px 60px;
-}
-
-header img {
-  width: 15%;
-  justify-content: center;
-  align-items: center;
-  margin-left: 320px;
-  margin-bottom: 20px;
-}
-
 .iphone {
   margin-left: 250px;
   margin-top: -50px;
+  width: 28%;
+  background-color: yellow;
 }
 
-#amount-buttons {
-  width: 40%;
-  margin-top: 6px;
+.iphone img {
+  max-width: 100%;
+}
+
+.buttons {
+  width: 9%;
+  height: 5px;
   display: table;
-  margin-left: 699px;
-  margin-top: -350px;
+  margin-left: 710px;
+  margin-top: -400px;
 }
 
-#amount-buttons > a {
+.buttons > a {
   font-size: 20px;
   font-weight: 500;
   display: grid;
@@ -61,13 +69,13 @@ header img {
   margin-left: 2px;
 }
 
-#amount-buttons > a:hover {
+.buttons > a:hover {
   color: #16b8eb;
   border: 3px solid #16b8eb;
   padding: 6px 5px;
 }
 
-#amount-buttons > a:active {
+.buttons > a:active {
   color: #16b8eb;
   border: 3px solid #16b8eb;
 }
@@ -80,8 +88,33 @@ header img {
 }
 
 #widget {
-  margin-left: 700px;
-  margin-top: 50px;
+  width: 11% !important;
+  height: 300px;
+  margin-left: 710px;
+  margin-top: -320px;
+}
+
+/*Modal*/
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vh;
+  transition: 3s ease;
+}
+
+.modal {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: o 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 30px 50px;
+  width: 600px;
+  max-width: 100%;
+  text-align: center;
 }
 
 .footer {
