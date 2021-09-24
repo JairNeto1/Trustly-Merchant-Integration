@@ -61,13 +61,16 @@ var establishData = {
 PayWithMyBank.addPanelListener(function (command, event) {
   if (command === 'event' && event.type === 'new_location') {
     if (event.data.indexOf('#success') === 0) {
-      document.querySelector('.modal-container').style.display = 'flex'
-      //location = 'https://trustlyintegration.herokuapp.com/'
-      location = 'http://127.0.0.1:5502'
+      document.querySelector('.modal').style.display = 'block'
+      location = 'https://trustlyintegration.herokuapp.com/'
+      //delayedConfirmation()
+      //location = 'http://127.0.0.1:5502'
       console.log('[success]', event.data)
     } else {
       console.log('[cancel]', event.data)
-      location = 'http://127.0.0.1:5502'
+      document.querySelector('.modal-denied').style.display = 'block'
+      location = 'https://trustlyintegration.herokuapp.com/'
+      //location = 'http://127.0.0.1:5502'
     }
     return false
   }

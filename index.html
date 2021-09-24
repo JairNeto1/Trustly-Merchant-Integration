@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/assets/styles/main.css" />
+
     <script src="/src/index.js" defer></script>
+    <script src="src/amount-buttoncopy.js" defer></script>
     <script src="https://sandbox.paywithmybank.com/start/scripts/paywithmybank.js?accessId=XHC67YWPe29WVg92EyZP"></script>
 
-      <link rel="stylesheet" href="/assets/styles/main.css" />    
       <link rel="shortcut icon" type="image/x-icon" href="assets/img/trustly-logo.ico" />
-
       <title>Integration</title>
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
   </head>
 
 
     <body>
-       <div class="header">
-          <div>
-            <img src="./assets/img/white-logo.svg">
-          </div>
-        </div>
-            <form id="pwmbForm" action="/trial-site/pay" method="GET"></form>
-                <div class="container">
-                  <div class="iphone">
-                    <img src="/assets/img/iphone.png"/>
-                  </div>
-                  <div class="buttons" id="amount-buttons">
-                    <a href="#" onclick="cent()"  id="cent" class="amount-button amount-button-selected" data-amount="0.50">$0.50</a>
+          <header>
+            <img src="./assets/img/white-logo.svg" class="logo1"/>
+          </header>
+           
+        <form id="pwmbForm" method="GET">
+          
+          <div class="container-amont">
+            <div class="iphone">
+              <img width="30%" src="/assets/img/iphone.png"/>
+            </div>
+              
+              <div id="amount-buttons">
+                <a href="#" onclick="cent(), getcent()"  id="cent" class="amount-button amount-button-selected" data-amount="0.50">$0.50</a>
 
-                    <a href="#" onclick="five()" id="five" class="amount-button" data-amount="5.00">$5.00</a>
+                <a href="#" onclick="five()" id="five" class="amount-button" data-amount="5.00">$5.00</a>
 
-                    <a href="#" onclick="fifty()" id="fifty" class="amount-button" data-amount="50.00">$50.00</a>
+                <a href="#" onclick="fifty()" id="fifty" class="amount-button" data-amount="50.00">$50.00</a>
 
-                    <a href="#" id="custom" 
-                    onclick="custom()"
-                    data-custom-amount="set-custom-amount">Custom</a>
-                  </div>  
-                </div> 
+                <a href="#" id="custom" 
+                onclick="custom()"
+                data-custom-amount="set-custom-amount">Custom</a>
+              
 
                 <div  class="custom-amount-wrapper editon">
                   <p class="title-custom-amount">Enter the amount you want to 
@@ -48,33 +51,35 @@
                     <button id="edit-custom-amount" class="button-custom-amount edit">Edit</button>
                   </div>
                   <p id="custom-amount-error-msg" class="custom-amount-error-msg" style="display: none;">Please enter the amount before selecting your bank.</p>
-                </div>
-                
+                </div>  
                 <div id="widget"></div>
-                
-                <dive class=modal-container>
-                  <div class=modal>Your transaction has been processed!</div>
-                </div>
-              </form>    
-                
-            <footer>
-              <div class="footer">
-                <div id="page-footer" class="grid grid-pad"></div>
-                  <div class="leftfooter">
-                    <div class="content">
-                      <a href="contact">Contact Us</a> | <a href="https://www.trustly.net" target="_blank">Visit our Website</a>
-                    </div>
+            </div>  
+          </div>    
+        </form>
+         <div class="modal">
+           <p>Transaction successful completed!</p>
+         </div>
+
+         <div class="modal-denied">
+          <p>Sorry, this transaction has failed.</p>
+        </div>
+          <footer>
+            <div class="footer">
+              <div id="page-footer" class="grid grid-pad"></div>
+                <div class="leftfooter">
+                  <div class="content">
+                    <a href="contact">Contact Us</a> | <a href="https://www.trustly.net" target="_blank">Visit our Website</a>
                   </div>
-                  <div class="rightfooter">
-                    <div class="content">
-                      <span title="1.120.0-2021-06-07T19:29:59Z">®</span> 2021 <img src="./assets/img/trial-logofooter.svg" class="logo">. All rights reserved.
-                    </div>
+                </div>
+                <div class="rightfooter">
+                  <div class="content">
+                    <span title="1.120.0-2021-06-07T19:29:59Z">®</span> 2021 <img src="./assets/img/trial-logofooter.svg" class="logo">. All rights reserved.
                   </div>
                 </div>
               </div>
-            </footer>   
-      </body>
+            </div>
+          </footer>   
+
+    </body>
 
 </html>
-
-
