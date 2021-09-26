@@ -63,7 +63,6 @@ PayWithMyBank.addPanelListener(function (command, event) {
     if (event.data.indexOf('#success') === 0) {
       document.querySelector('.modal').style.display = 'block'
       location = 'https://trustlyintegration.herokuapp.com/'
-      //delayedConfirmation()
       //location = 'http://127.0.0.1:5502'
       console.log('[success]', event.data)
     } else {
