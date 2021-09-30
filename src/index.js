@@ -5,7 +5,7 @@ function cent() {
   document.querySelector('.editon').classList.remove('amount-button-selected')
   document.querySelector('#cent').classList.add('amount-button-selected')
   document.querySelector('.editon').style.display = 'none'
-  var _cent = document.getElementById('#cent').value
+  //var _cent = document.getElementById('#cent').value
 }
 
 function five() {
