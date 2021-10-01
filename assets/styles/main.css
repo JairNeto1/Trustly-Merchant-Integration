@@ -48,12 +48,6 @@ header img {
   width: 100%;
 }
 
-@media (max-width: 1100px) {
-  .iphone {
-    display: none;
-  }
-}
-
 #amount-buttons {
   width: 30%;
   position: fixed !important;
@@ -291,18 +285,17 @@ input[type='number']::-webkit-outer-spin-button {
   font-family: 'Lato', sans-serif;
 }
 
-@media only screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
+  .container-amont .iphone {
+    width: 100%;
+  }
+  
   .footer {
     position: relative;
     margin-top: 700px;
   }
 
-  @media (max-width: 1100px) {
-    .iphone {
-      display: none;
-    }
-  }
-
+ 
   .footer .rightfooter {
     width: 40%;
     position: absolute;
@@ -327,6 +320,13 @@ input[type='number']::-webkit-outer-spin-button {
     margin-bottom: -50px;
   }
 }
+
+ @media (max-width: 1100px) {
+    .iphone {
+      display: none;
+    }
+  }
+
 
 @media (max-width: 768px) {
   .logo1 {
@@ -358,14 +358,14 @@ input[type='number']::-webkit-outer-spin-button {
 
   .footer {
     position: relative;
-    margin-top: 700px;
+    margin-top: 670px;
   }
 
   .footer .rightfooter {
     width: 100%;
     display: block;
     position: absolute;
-    margin-left: -200px;
+    margin-left: -100px;
     margin-top: 50px;
   }
 
@@ -389,6 +389,7 @@ input[type='number']::-webkit-outer-spin-button {
     height: 40px;
     margin-left: 3px;
     margin-top: -600px;
+    
   }
 
   #amount-buttons #custom {
@@ -402,8 +403,9 @@ input[type='number']::-webkit-outer-spin-button {
   }
 
   .footer {
-    position: relative;
+    position: block;
     margin-top: 700px;
+    
   }
 
   .footer .rightfooter {
@@ -411,7 +413,7 @@ input[type='number']::-webkit-outer-spin-button {
     display: block;
     position: absolute;
     margin-left: -60px;
-    margin-top: 50px;
+    margin-top: 30px;
   }
 
   .leftfooter {
@@ -447,7 +449,7 @@ input[type='number']::-webkit-outer-spin-button {
   }
 
   .footer {
-    position: relative;
+    position: block;
     margin-top: 700px;
   }
 
@@ -465,6 +467,10 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 @media (max-width: 320px) {
+  body {
+    width: 100%;
+    height: 100%;
+  }
   .logo1 {
     width: 30%;
     position: center;
@@ -492,7 +498,7 @@ input[type='number']::-webkit-outer-spin-button {
   }
 
   .footer {
-    position: relative;
+    position: block;
     margin-top: 700px;
   }
 
@@ -506,5 +512,18 @@ input[type='number']::-webkit-outer-spin-button {
 
   .leftfooter {
     display: none;
+  }
+
+  .modal {
+    display: none;
+    margin-top: -555px;
+    margin-left: 16px;
+    justify-content: center;
+    width: 100%;
+    height: 45%;
+    background-color: #ffff;
+    box-shadow: 10px 10px 15px rgba(1, 1, 1, 0.4);
+    position: absolute;
+    border-radius: 7px;
   }
 }
