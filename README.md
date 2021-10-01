@@ -1,4 +1,4 @@
-# Working on My First Trustly Integration
+# Working on the Trustly Integration
 
 ## Technologies
 
