@@ -58,18 +58,21 @@ var establishData = {
 
 //Callback validation
 
+function showModal(modalClassName) {
+  document.querySelector(`.${modalClassName}`).style.display = 'block'
+  setTimeout(() => document.querySelector(`.${modalClassName}`).classList.add('hide'), 3000)
+}
+
 PayWithMyBank.addPanelListener(function (command, event) {
   if (command === 'event' && event.type === 'new_location') {
     if (event.data.indexOf('#success') === 0) {
-      document.querySelector('.modal').style.display = 'block'
-      location = 'https://trustlyintegration.herokuapp.com/'
-      //location = 'http://127.0.0.1:5502'
-      console.log('[success]', event.data)
+      showModal('modal')
+      // location = 'https://trustlyintegration.herokuapp.com/'
+      // location = 'http://127.0.0.1:5502'
     } else {
-      console.log('[cancel]', event.data)
-      document.querySelector('.modal-denied').style.display = 'block'
-      location = 'https://trustlyintegration.herokuapp.com/'
-      //location = 'http://127.0.0.1:5502'
+      showModal('modal-denied')
+      // location = 'https://trustlyintegration.herokuapp.com/'
+      // location = 'http://127.0.0.1:5502'
     }
     return false
   }
