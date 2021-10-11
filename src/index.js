@@ -30,7 +30,7 @@ function showModal(modalClassName) {
 PayWithMyBank.addPanelListener(function (command, event) {
   if (command === 'event' && event.type === 'new_location') {
     if (event.data.indexOf('#success') === 0) {
-      showModal('modal')
+      location = '../thank-you.html'
       // location = 'https://trustlyintegration.herokuapp.com/'
       // location = 'http://127.0.0.1:5502'
     } else {
