@@ -5,8 +5,8 @@ const PayWithMyBankOptions = {
 }
 
 const establishData = {
-  accessId: 'XHC67YWPe29WVg92EyZP',
-  merchantId: '1017088088',
+  accessId: 'XzHpRUr7RF75hg9nC5x2',
+  merchantId: '1012523953',
   merchantReference: Math.random(),
   description: 'Money2020',
   //showSuccessMessage: true,
@@ -24,7 +24,10 @@ const establishData = {
 
 function showModal(modalClassName) {
   document.querySelector(`.${modalClassName}`).style.display = 'block'
-  setTimeout(() => document.querySelector(`.${modalClassName}`).classList.add('hide'), 3000)
+  setTimeout(
+    () => document.querySelector(`.${modalClassName}`).classList.add('hide'),
+    3000
+  )
 }
 
 PayWithMyBank.addPanelListener(function (command, event) {
@@ -35,7 +38,7 @@ PayWithMyBank.addPanelListener(function (command, event) {
       // location = 'http://127.0.0.1:5502'
     } else {
       showModal('modal-denied')
-      // location = 'https://trustlyintegration.herokuapp.com/'
+      location = 'https://trustlyintegration.herokuapp.com/'
       // location = 'http://127.0.0.1:5502'
     }
     return false
