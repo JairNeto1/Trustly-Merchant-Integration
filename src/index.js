@@ -8,7 +8,7 @@ const establishData = {
   accessId: 'XzHpRUr7RF75hg9nC5x2',
   merchantId: '1012523953',
   merchantReference: Math.random(),
-  description: 'Money2020',
+  description: 'TestIntegration',
   //showSuccessMessage: true,
   //successMessage: 'This transaction has been completed.',
   currency: 'USD',
@@ -38,7 +38,7 @@ PayWithMyBank.addPanelListener(function (command, event) {
       // location = 'http://127.0.0.1:5502'
     } else {
       showModal('modal-denied')
-      location = 'https://trustlyintegration.herokuapp.com/'
+      // location = 'https://trustlyintegration.herokuapp.com/'
       // location = 'http://127.0.0.1:5502'
     }
     return false
