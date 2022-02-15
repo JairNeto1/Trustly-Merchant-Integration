@@ -1,4 +1,4 @@
-# Working on the Trustly Integration
+# Trustly Integration
 
 ## Technologies
 
