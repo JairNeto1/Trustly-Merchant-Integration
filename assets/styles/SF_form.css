@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  color: #535353;
+}
+
+body {
+  height: 100vh;
+}
+
+:focus {
+  outline-style: none;
+  outline-color: transparent;
+  background-color: #ebf9fd;
+}

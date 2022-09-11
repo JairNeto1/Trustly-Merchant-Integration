@@ -3,25 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="./assets/styles/main.css" />
-
-    <script src="./src/index.js" defer></script>
-    <script src="./src/amount-buttoncopy.js" defer></script>
-    <script src="https://sandbox.paywithmybank.com/start/scripts/paywithmybank.js?accessId=XzHpRUr7RF75hg9nC5x2"></script>
-
     <link
       rel="shortcut icon"
       type="image/x-icon"
       href="./assets/img/trustly-logo.ico"
     />
     <title>Integration</title>
-
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
   </head>
 
   <body>
@@ -32,28 +20,22 @@
         </div>
       </header>
 
-      <form id="pwmbForm" method="GET" class="content-container">
-        <div class="container-amount">
-          <div class="iphone">
-            <img src="./assets/img/iphone.png" />
-          </div>
-        </div>
-        <div class="widgetContainer">
-          <div id="widget"></div>
-        </div>
-      </form>
-      <div class="modal">
-        <p>Transaction completed!</p>
-      </div>
+      <main class="main">
+        <a class="back-anchor" href="./index.html">
+          <img src="./assets/img/arrow-left.svg" alt="" />
+          Home
+        </a>
+        <h1>Your Submission has been successfully Applied to US Support!</h1>
+        <img src="./assets/img/order-completed.svg" alt="" />
+      </main>
 
-      <div class="modal-denied">
-        <p>Sorry, the transaction was canceled.</p>
-      </div>
       <footer class="content-container">
         <div class="footer">
           <div id="page-footer" class="grid grid-pad"></div>
           <div class="leftfooter">
-            <a href="SF_form.html" target="_blank">Contact Us</a>
+            <a href="https://www.trustly.net/us/contact-form" target="_blank"
+              >Contact Us</a
+            >
             |
             <a href="https://www.trustly.net/us/" target="_blank"
               >Visit our Website</a
